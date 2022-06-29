@@ -135,3 +135,33 @@ table{
         position: relative;
     }
 }
+
+/* add user & update user form */
+.form-title{
+    margin-top: 2em;
+}
+
+.form-title >h2{
+    padding: .5em 0;
+}
+
+.new_user{
+    max-width: 786px;
+    margin: auto;
+}
+
+#update_user .form-group,
+#add_user .form-group{
+    margin: .4em 0;
+}
+
+#update_user .form-group input[type="text"], [type="email"],
+#add_user .form-group input[type="text"], [type="email"]{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
