@@ -29,6 +29,10 @@ app.get('/', (req, res) =>{
     res.render("index.ejs"); 
 })
 
+app.get('/add-user', (req, res) =>{
+    res.render("add_user"); 
+})
+
 app.listen(PORT, ()=>{
     console.log(`Server is running on Port ${PORT}`);
 })
