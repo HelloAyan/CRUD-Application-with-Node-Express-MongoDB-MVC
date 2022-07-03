@@ -9,6 +9,13 @@ exports.create = (req, res)=>{
         )
         return;
     }
+    // new user
+    const user = new userDB({
+        name: req.body.name,
+        email: req.body.email,
+        gender: req.body.gender,
+        status: req.body.status
+    })
 
 }
 
