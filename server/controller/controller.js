@@ -1,3 +1,4 @@
+const { rawListeners } = require('../model/model');
 const userDB = require('../model/model');
 
 // create and save new user
@@ -16,6 +17,17 @@ exports.create = (req, res)=>{
         gender: req.body.gender,
         status: req.body.status
     })
+
+    //save user in the database
+    user.save(user)
+    .then(data=>{
+        res.send(data)
+    })
+    .catch(err =>{
+        res.status(500).send({
+            message: err.message || "Some error occure while creating a create operation";
+        });
+    });
 
 }
 
