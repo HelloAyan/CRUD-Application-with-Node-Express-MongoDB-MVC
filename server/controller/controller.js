@@ -32,11 +32,21 @@ exports.create = (req, res)=>{
 
 // retrive and return all users/ retrive and return a single user
 exports.find = (req, res)=>{
+    userDB.find()
+    .then(user=>{
+        res.send(user)
+    })
+    .catch(err =>{
+        res.status(500).send({
+            message: err.message || "Error Occurred while retriving user information"
+        })
+    })
 
 }
 
 // Update a new identified user by user id
 exports.update = (req, res)=>{
+    
 
 }
 
