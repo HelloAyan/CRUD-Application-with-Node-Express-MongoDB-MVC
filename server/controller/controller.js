@@ -1,10 +1,9 @@
-const { rawListeners } = require('../model/model');
 const userDB = require('../model/model');
 
 // create and save new user
 exports.create = (req, res)=>{
     // validate request
-    if(req.body){
+    if(!req.body){
         res.status(400).send(
             {message: "Content can not be empty!"}
         )
