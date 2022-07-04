@@ -80,5 +80,9 @@ exports.delete = (req, res)=>{
             })
         }
     })
-    .catch()
+    .catch(err =>{
+        res.status(500).send({
+            message: "Could not delete user with id = " + id
+        })
+    })
 }
