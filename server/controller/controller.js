@@ -32,6 +32,22 @@ exports.create = (req, res)=>{
 
 // retrieve and return all users/ retrive and return a single user
 exports.find = (req, res)=>{
+
+    if(req.query.id){
+        const id = req.query.id;
+
+        userDB.findById(id)
+        .then(data =>{
+            if(!data){
+                res.status(404).send({message: "Not found user with id " + id})
+            }else{
+                res.send(data)
+            }
+        })
+        .catch( err=>{
+            res.status(500).send({message: "Error retrieving user with id" + id})
+        })
+    }else{
     userDB.find()
     .then(user=>{
         res.send(user)
@@ -41,6 +57,8 @@ exports.find = (req, res)=>{
             message: err.message || "Error Occurred while retriving user information"
         })
     })
+    }
+    
 
 }
 
@@ -82,7 +100,7 @@ exports.delete = (req, res)=>{
     })
     .catch(err =>{
         res.status(500).send({
-            message: "Could not delete user with id = " + id
+            message: "  id = " + id
         })
     })
 }
