@@ -1,5 +1,5 @@
 exports.homeRouters = (req, res) =>{
-    res.render("index.ejs"); 
+    res.render("index.ejs", {user: "New Data"}); 
 }
 
 exports.addUser = (req, res) =>{
