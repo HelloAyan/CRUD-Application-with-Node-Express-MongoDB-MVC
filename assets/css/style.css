@@ -227,3 +227,8 @@ table{
     background-color: var(--dark);
    color: var(--border); 
 }
+
+.radio input[type='radio']{
+    position: absolute;
+    opacity: 0;
+}
