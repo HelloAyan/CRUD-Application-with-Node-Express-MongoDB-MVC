@@ -9,7 +9,7 @@ $('#update_user').submit(function(event){
     var data = {}
 
     $.map(unindexed_array, function(n,i){
-        data[n['name'] = n['value']]
+        data[n['name']] = n['value']
     })
 
     console.log(data);
