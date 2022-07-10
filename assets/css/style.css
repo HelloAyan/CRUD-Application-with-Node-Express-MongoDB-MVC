@@ -232,3 +232,7 @@ table{
     position: absolute;
     opacity: 0;
 }
+
+.delete{
+    cursor: pointer;
+}
