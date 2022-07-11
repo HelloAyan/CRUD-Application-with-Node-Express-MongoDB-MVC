@@ -1,3 +1,3 @@
-(https://myoctocat.com/assets/images/Banner.png)
+(/assets/img/Banner.png)
 
 # CRUD-Application-with-Node-Express-MongoDB-MVC
