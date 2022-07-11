@@ -1,3 +1,3 @@
-(/assets/img/Banner.png)
+(./assets/img/Banner.png)
 
 # CRUD-Application-with-Node-Express-MongoDB-MVC
