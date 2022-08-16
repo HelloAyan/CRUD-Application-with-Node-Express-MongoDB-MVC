@@ -235,4 +235,6 @@ table{
 
 .delete{
     cursor: pointer;
+    color: red;
+    
 }
