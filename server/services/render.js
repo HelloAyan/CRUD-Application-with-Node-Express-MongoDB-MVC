@@ -2,7 +2,7 @@ const axios = require('axios');
 
 exports.homeRouters = (req, res) =>{
     // Make a get request to /api/user
-    axios.get('https://crud-application-mvc.herokuapp.com/api/users')
+    axios.get('https://crud-app-mvc.herokuapp.com/api/users')
     .then(function (response){
         
         res.render("index.ejs", {user: response.data});
@@ -17,7 +17,7 @@ exports.addUser = (req, res) =>{
 }
 
 exports.updateUser = (req, res) =>{
-    axios.get('https://crud-application-mvc.herokuapp.com/api/users', {params: {id: req.query.id}})
+    axios.get('https://crud-app-mvc.herokuapp.com/api/users', {params: {id: req.query.id}})
     .then(function(userdata){
         res.render('update_user', {user: userdata.data})
     })
